@@ -4,68 +4,85 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!-- Custom Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+      }
+    </style>
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Landing Page</title>
   </head>
 
 
-  <body class="p-3 bg-dark bg-gradient text-light">
+  <body class="p-3 bg-light text-dark">
 
-    <div class="row d-flex justify-content-center border-bottom border-5 border-success">
+    <div class="row pl-5 border-bottom border-5 border-light">
         <h1>Hubspot Form API</h1>
     </div>
 
-    <div class="row mt-5 mb-6">
+    <div class="row mt-1 py-6 mb-4" style="background-color: #ff5851">
         
-        <div class="col-sm-2">
-        </div>
 
-        <div class="col-sm-5">
+        <div class="col-sm-6 mt-5 text-light d-flex justify-content-center">
             <h2>Create A Contact In Hubspot</h2>
         </div>
 
         <!-- Form -->
-            <form class="col-sm-3 form-floating" id="myform">
+
+            <form class="col-lg-4 mx-2 my-5 form-floating bg-light py-4 shadow pb-2 bg-body rounded" id="myform">
                 <input type="text" class="form-control mb-3" placeholder="First Name" name="firstname" id="firstname">
                 <input type="text" class="form-control mb-3" placeholder="Last Name" name="lastname" id="lastname">
                 <input type="email" class="form-control mb-3" placeholder="Email" name="email" id="email">
                 <input type="tel" class="form-control mb-3" placeholder="Phone Number" name="phone" id="phone">
-                <button type="button" class="btn btn-outline-success text-uppercase" onclick="formv3()">submit</button>
+                <button type="button" class="btn btn-outline-dark text-uppercase" onclick="formv3()">submit</button>
             </form>
 
-        <div class="col-sm-2">
+        <div class="col-sm-2 bg-light">
         </div>
 
     </div>
     
-    <!-- Section 2 -->
+    <!-- Cards -->
 
-    <div class="row mt-5 bg-light text-dark">
+    <div class="row mt-5">
 
-        <div class="row">
-            <div class="col mt-5 d-flex justify-content-center">
-                <h2>Project Info</h2>
+      <div class="col mb-4 ml-4 d-flex justify-content-center">
+        <div class="card shadow bg-body rounded" style="width: 18rem;">
+            <img src="https://21760335.fs1.hubspotusercontent-na1.net/hubfs/21760335/guidelines_the-sprocket.svg" class="card-img-top border border-secondary" target="blank">
+            <div class="card-body">
+                <h5 class="card-text">See the contact Hubspot</h5>
+                <a href="https://app.hubspot.com/contacts/21760335/contact/201/" class="btn btn-outline-dark m-2" role="button" target="blank">Go To Contact In Hubspot</a>
             </div>
+          </div>
         </div>
 
-        <div class="row mt-5">
-            <div class="col">
-                <h4>See the requested contact in my Hubspot portal:</h4>
-            </div>
-
-            <div class="col">
-                <a href="https://app.hubspot.com/contacts/21760335/contact/201/" class="btn btn-success" role="button" target="blank">Go To Contact In Hubspot</a>
-            </div>
+        <div class="col ml-4 d-flex justify-content-center">
+          <div class="card shadow bg-body rounded" style="width: 18rem;">
+            <img src="https://21760335.fs1.hubspotusercontent-na1.net/hubfs/21760335/GitHub-Mark.png" class="card-img-top border border-secondary" target="blank">
+            <div class="card-body">
+                <h5 class="card-text">See the Github Project</h5>
+                <a href="https://github.com/LynfordU/hubspot-form-api" class="btn btn-outline-dark m-2" role="button" target="blank">Go To Github Project</a>
+            </div> 
+          </div>       
         </div>
 
     </div>
 
-    </body>
-       <!-- Start of HubSpot Embed Code -->
-       <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/21760335.js"></script>
-       <!-- End of HubSpot Embed Code -->
-       <script>
+           
+            <!-- Start of HubSpot Embed Code -->
+           <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/21760335.js">
+           </script>
+           <!-- End of HubSpot Embed Code -->
+
+  </body>
+
        function formv3(){
           // Create the new request
           var xhr = new XMLHttpRequest();
@@ -134,4 +151,4 @@
           setTimeout(function() {document.getElementById('myform').submit();}, 3000);
        }
        </script>
-       </html>
+</html>
